@@ -1,4 +1,4 @@
-package edu.mum.cs544.config;
+package edu.mum.cs544.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

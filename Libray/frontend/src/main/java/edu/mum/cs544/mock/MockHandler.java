@@ -4,18 +4,23 @@ import java.util.Arrays;
 
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.mum.cs544.common.domain.Book;
 import edu.mum.cs544.common.domain.BookCopy;
+import edu.mum.cs544.common.domain.Member;
 import edu.mum.cs544.common.domain.Role;
 import edu.mum.cs544.common.domain.Staff;
 import edu.mum.cs544.common.service.base.BaseService;
+import edu.mum.cs544.service.ReaderService;
 
 @Service
 @Transactional
 public class MockHandler extends BaseService {
 
+	@Autowired
+	private ReaderService readerService;
 	public void createMockData() {
 		// admin
 		// lib
@@ -28,6 +33,17 @@ public class MockHandler extends BaseService {
 		createBook("124", "testBook002");
 		createBook("125", "testBook003");
 		createBook("126", "testBook004");
+		Member m = new Member();
+		m.setFirstname("Bilegee");
+		m.setLastname("Jargalsaikhan");
+		m.setEmail("bilgee12.py@gmail.com");
+//		m.set
+		readerService.add(m);
+//	    "firstname":"Bilegee",
+//	    "lastname":"Jargalsaikhan",
+//	    "email":"bilgee12.py@gmail.com",
+//	    "password":"123"
+		
 	}
 
 	private void createBook(String isbn, String title) {

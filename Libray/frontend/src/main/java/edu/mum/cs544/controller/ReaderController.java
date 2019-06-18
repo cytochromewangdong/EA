@@ -37,7 +37,7 @@ public class ReaderController {
 	}
 
 	@GetMapping("/{id}")
-	public SimpleResultDto<Member> get(@PathVariable int id) {
+	public SimpleResultDto<Member> get(@PathVariable String id) {
 		return readerService.getOne(id);
 	}
 

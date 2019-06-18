@@ -11,7 +11,7 @@ import edu.mum.cs544.common.domain.Staff;
 import edu.mum.cs544.common.service.base.BaseService;
 import edu.mum.cs544.dto.ListResultDto;
 import edu.mum.cs544.dto.SimpleResultDto;
-import edu.mum.cs544.dto.base.DataPart;
+import edu.mum.cs544.dto.base.DataListPart;
 
 @Service
 @Transactional
@@ -19,7 +19,7 @@ public class LibrianService extends BaseService {
 	public ListResultDto<Staff> getAll(int page) {
 		Page<Staff> pageItem = staffRepository.findByRemovalFlagOrderByModifyDate(0,
 				PageRequest.of(page, Constants.PAGE_SIZE));
-		return new ListResultDto<>(new DataPart<>(pageItem.getContent(), pageItem.getTotalElements()));
+		return new ListResultDto<>(new DataListPart<>(pageItem.getContent(), pageItem.getTotalElements()));
 	}
 
 	public Long add(Staff staff) {

@@ -1,4 +1,4 @@
-package edu.mum.cs544.common.security;
+package edu.mum.cs544.security;
 
 import java.util.stream.Collectors;
 
@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import edu.mum.cs544.common.domain.LoginUser;
-import edu.mum.cs544.common.service.UserService;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

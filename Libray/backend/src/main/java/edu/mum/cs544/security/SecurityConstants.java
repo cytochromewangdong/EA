@@ -1,4 +1,4 @@
-package edu.mum.cs544.common.security;
+package edu.mum.cs544.security;
 
 public class SecurityConstants {
 	public static final String AUTH_LOGIN_URL = "/api/authenticate";

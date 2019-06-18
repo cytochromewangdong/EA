@@ -3,6 +3,7 @@ package edu.mum.cs544.common.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -18,7 +19,7 @@ import lombok.Setter;
 @Setter
 public class BookCopy extends DefaultPrimaryKeyEntity {
 
-	@OneToOne(mappedBy = "bookCopy")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "bookCopy")
 	private CheckoutEntry checkoutEntry;
 
 	@Column(unique = true)
@@ -27,7 +28,7 @@ public class BookCopy extends DefaultPrimaryKeyEntity {
 	@ManyToOne
 	private Book book;
 
-	@OneToMany(mappedBy = "bookCopy")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "bookCopy")
 	private List<CheckoutEntryHistory> checkoutEntryHistoryList = new ArrayList<>();
 
 }

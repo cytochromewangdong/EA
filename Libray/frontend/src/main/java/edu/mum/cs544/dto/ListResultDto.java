@@ -1,14 +1,14 @@
 package edu.mum.cs544.dto;
 
-import edu.mum.cs544.dto.base.DataPart;
+import edu.mum.cs544.dto.base.DataListPart;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ListResultDto<T> extends SimpleResultDto<DataPart<T>> {
+public class ListResultDto<T> extends SimpleResultDto<DataListPart<T>> {
 
-	public ListResultDto(DataPart<T> data) {
+	public ListResultDto(DataListPart<T> data) {
 		super(data);
 	}
 

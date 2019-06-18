@@ -9,9 +9,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DataPart<T> {
+public class DataListPart<T> {
 
-	public DataPart(List<T> items, long totalCount) {
+	public DataListPart(List<T> items, long totalCount) {
 		super();
 		this.items = items;
 		this.totalCount = totalCount;

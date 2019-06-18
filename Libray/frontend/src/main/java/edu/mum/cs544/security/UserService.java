@@ -1,4 +1,4 @@
-package edu.mum.cs544.common.service;
+package edu.mum.cs544.security;
 
 import java.util.Date;
 import java.util.List;
@@ -12,7 +12,6 @@ import edu.mum.cs544.common.domain.LoginUser;
 import edu.mum.cs544.common.domain.Role;
 import edu.mum.cs544.common.dto.OpenId;
 import edu.mum.cs544.common.dto.UserNamePassword;
-import edu.mum.cs544.common.security.SecurityConstants;
 import edu.mum.cs544.common.service.base.BaseService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

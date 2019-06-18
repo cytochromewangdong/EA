@@ -1,4 +1,4 @@
-package edu.mum.cs544.common.security;
+package edu.mum.cs544.security;
 
 import java.io.IOException;
 import java.util.Collection;
