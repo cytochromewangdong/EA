@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import edu.mum.cs544.common.domain.base.DefaultPrimaryKeyEntity;
 import lombok.Getter;
@@ -24,6 +25,7 @@ public class Member extends DefaultPrimaryKeyEntity {
 	private String phonenumber;
 	private String firstname;
 	private String lastname;
+	@JsonProperty("addressData")
 	private Address personAddress;
 	private String email;
 	@JsonIgnore

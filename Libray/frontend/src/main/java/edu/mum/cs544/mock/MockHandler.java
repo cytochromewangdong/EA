@@ -73,12 +73,12 @@ public class MockHandler extends BaseService {
 		this.roleRepository.save(norm);
 
 		Staff lb = new Staff();
-		lb.setUsername("lib");
+		lb.setUsername("lib@1.com");
 		lb.setPassword(bCryptPasswordEncoder.encode("123"));
 		lb.getRoleList().add(lib);
 		this.staffRepository.save(lb);
 		Staff adminStaff = new Staff();
-		adminStaff.setUsername("admin");
+		adminStaff.setUsername("admin@1.com");
 		adminStaff.setPassword(bCryptPasswordEncoder.encode("123"));
 		adminStaff.getRoleList().add(admin);
 
